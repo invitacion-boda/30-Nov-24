@@ -1,0 +1,256 @@
+body {
+    margin-top: 5%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 100% !important;
+    background-color: #f7f3f0; /* Color de fondo */
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    color: #FF66B2;
+    transition: color 0.3s;
+    margin-right: 10px; /* Espacio entre el botón y la barra de progreso */
+    width: 10%;
+}
+
+.play-button:hover {
+    color: #FF66B2;
+}
+
+.progress-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; /* Centra la barra verticalmente respecto al botón */
+}
+
+#progressBar {
+    width: 100%;
+    -webkit-appearance: none;
+    background: #ddd;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #FF66B2;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#padres {
+    font-family: "Allura", cursive; /* Fuente para los títulos */
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#frase1 {
+    font-family: "Allura", cursive; /* Fuente para los títulos */
+    text-align: center;
+    font-size: 1.4em;
+font-style: bold;
+}
+
+h1 {
+    font-family: "Allura", cursive; /* Fuente para los títulos */
+    font-size: 2.5em;
+    text-align: center;
+    color: #FF66B2;
+}
+
+.icon {
+    font-size: 0.1em; /* Tamaño del icono */
+    color: black; /* Color del icono */
+    margin: 0 2em; /* Espacio reducido entre el icono y el texto */
+    line-height: 1;
+}
+
+.text {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+}
+
+/* Cuenta Regresiva */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.countdown-item {
+    background-color: #FF66B2; /* Color de fondo del rectángulo */
+    color: #ffffff; /* Color del texto */
+    border-radius: 8px;
+    padding: 10px;
+    width: 40px; /* Ancho de cada rectángulo */
+    text-align: center;
+}
+
+.countdown-number {
+    font-family: "Allura", cursive; /* Fuente para los números */
+    font-size: 1.5em;
+}
+
+.countdown-label {
+    font-family: "Merriweather", serif; /* Fuente para las etiquetas */
+    font-size: 0.5em;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    flex: 1; /* Esto hace que las columnas tengan el mismo tamaño */
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.card {
+    background: #fff; /* Fondo blanco para la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Para que los bordes redondeados funcionen correctamente */
+    width: 100%; /* Ancho fijo para la tarjeta */
+    text-align: center; /* Centrar texto y contenido */
+    padding: 20px; /* Espaciado interno */
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #FF66B2; /* Color del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    text-decoration: none;
+    cursor: pointer;
+}
+.events {
+    display: flex;
+    flex: 1; /* La sección de eventos ocupa el espacio restante del contenedor */
+}
+
+.event-column {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left !important;
+}
+.event {
+    margin-bottom: 20px;
+}
+
+.event-column:nth-child(1) {
+    flex: 0 0 25%; /* Primera columna con 25% de ancho */
+}
+
+.event-column:nth-child(2) {
+    flex: 0 0 25%; /* Segunda columna con 25% de ancho */
+}
+
+.event-column:nth-child(3) {
+    flex: 0 0 50%; /* Tercera columna con 50% de ancho */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del formulario */
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #333333; /* Color del texto de las etiquetas */
+}
+
+.inputForm,
+select,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ancho completo del formulario */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Para Firefox */
+}
+
+/* Estilo para los spinners en otros navegadores */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: inner-spin-button;
+    margin: 0;
+}
+
+.inputForm:focus,
+select:focus,
+textarea:focus {
+    outline: 1px solid #FF66B2; /* Color personalizado para el contorno */
+    border-color: #FF66B2; /* Opcional: Cambia el color del borde para que coincida */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#formBtn {
+    padding: 10px;
+    background-color: #FF66B2; /* Color del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#formBtn:hover {
+    background-color: #e60077; /* Color del botón al pasar el ratón */
+}
