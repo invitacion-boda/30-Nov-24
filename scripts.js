@@ -69,7 +69,8 @@ $(document).ready(function () {
 
 document.getElementById("rsvp-form").addEventListener("submit", function (event) {
     event.preventDefault();
-
+$("#formStatus").hide();
+$("#loading").show();
     const formData = new FormData(event.target);
     const data = {};
     formData.forEach((value, key) => {
@@ -85,18 +86,24 @@ document.getElementById("rsvp-form").addEventListener("submit", function (event)
         .then((result) => {
             const messageDiv = document.getElementById("formStatus");
             if (result.result === "success") {
-                messageDiv.textContent = "Datos enviados con éxito.";
+                messageDiv.innerHTML = "<b>Datos enviados con éxito.</b>";
                 messageDiv.style.color = "#FF66B2"; // Estilo opcional
                 event.target.reset(); // Limpia el formulario
+$("#formStatus").show();
+$("#loading").hide();
             } else {
-                messageDiv.textContent = "Hubo un error al enviar los datos.";
+                messageDiv.innerHTML = "<b>Hubo un error al enviar los datos.</b>";
                 messageDiv.style.color = "red"; // Estilo opcional
+$("#formStatus").show();
+$("#loading").hide();
             }
         })
         .catch((error) => {
             const messageDiv = document.getElementById("formStatus");
             console.error("Error:", error);
-            messageDiv.textContent = "Hubo un error al enviar los datos.";
+            messageDiv.innerHTML = "<b>Hubo un error al enviar los datos.</b>";
             messageDiv.style.color = "red"; // Estilo opcional
+$("#formStatus").show();
+$("#loading").hide();
         });
 });
